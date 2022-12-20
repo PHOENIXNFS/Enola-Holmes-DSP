@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: 0e87cd7a75d08f94487484f9a5bf48e1
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Victorian Orchid
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f174146d3b1e6904b88e9bb75d12ea0f, type: 3}
+  - {fileID: 12800000, guid: ea144a23746569d4eb39bc744e748b8e, type: 3}
+  - {fileID: 12800000, guid: 9717909db5088ef45812793b28af65b6, type: 3}
+  - {fileID: 12800000, guid: 20bde58aa3afff249a36681c6229e612, type: 3}
+  - {fileID: 12800000, guid: f939d15fbd3321d48b3365fc72e41cdd, type: 3}
+  - {fileID: 12800000, guid: a986ee20b74548d4bb84135190d13857, type: 3}
+  - {fileID: 12800000, guid: 1c45aa65d0718814bb199948f702022a, type: 3}
+  - {fileID: 12800000, guid: 96c1aada8bf3e86418abf1b07aea9756, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
