@@ -24,21 +24,26 @@ public class Inventory_Canvas : MonoBehaviour
     public void UpdateInventorySlots()
     {
         int x = 0;
-        int y = 0;
+        float y = 0;
         float inventorySlotSize = 11.0f;
         foreach (InventoryItem item in inventory.GetInventoryItemList())
         {
             RectTransform inventorySlotRectangleTransform = Instantiate(inventorySlotTemplate, inventorySlotMain).GetComponent<RectTransform>();
             inventorySlotRectangleTransform.gameObject.SetActive(true);
-            inventorySlotRectangleTransform.anchoredPosition = new Vector2(x * inventorySlotSize, y * inventorySlotSize);
+            inventorySlotRectangleTransform.anchoredPosition = new Vector2(x * inventorySlotSize, -y * inventorySlotSize);
+            
             Image inventorySlotImage = inventorySlotRectangleTransform.Find("image").GetComponent<Image>();
             inventorySlotImage.sprite = item.GetInventoryItemSprite();
+
+            Button inventorySlotButton = inventorySlotRectangleTransform.Find("button").GetComponent<Button>();
+            inventorySlotButton = item.GetInventoryItemButton();
+
 
             x++;
             if (x >= 3)
             {
                 x = 0;
-                y++;
+                y += 1.5f;
 
             }
 

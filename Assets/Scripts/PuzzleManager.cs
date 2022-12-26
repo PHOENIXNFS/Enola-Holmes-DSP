@@ -1,18 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private Transform PuzzleBox;
     [SerializeField] private Transform PuzzlePiece;
 
+    public GameMenu gameMenu;
+    public ReturnToMenu returnToMenu;
+    public Inventory inventory;
+
+    public SlidingPuzzleTileMovement SlidingPuzzleTileMovement;
+    public Puzzle puzzle;
+
+    public bool bIsPuzzleComplete;
+
     private int emptylocation;
     private int size;
+
     private void Start()
     {
-        size = 4;
-        CreatePuzzlePieces(0.1f);
+        //size = 4;
+        //CreatePuzzlePieces(0.1f);
+        bIsPuzzleComplete = false;
+    }
+
+    private void Update()
+    {
+        //GameComplete();
+        //ReturnToMainGame();
     }
 
     private void CreatePuzzlePieces(float GapThickness)
@@ -36,5 +54,40 @@ public class PuzzleManager : MonoBehaviour
             }
         }
            
+    }
+
+    public void GameComplete()
+    {
+        
+        if (SlidingPuzzleTileMovement.bIsFinalTileInPosition == true && puzzle.bisAllTilesInPosition == true)
+        {
+            bIsPuzzleComplete = true;
+            //Cutscene Puzzle Solved;
+            //Cutscene Puzzle Box Found;
+            //remove sliding puzzle and puzzle tile from inventory;
+            inventory.RemoveInventoryItem(InventoryItem.InventoryItemType.PicturePuzzle);            
+            inventory.AddInventoryItem(new InventoryItem { inventoryItemType = InventoryItem.InventoryItemType.CryptexPuzzleBox});
+            gameMenu.LoadScemeAsync();
+            returnToMenu.LoadGame();
+            SceneManager.UnloadSceneAsync("Puzzle");
+            //UnityEditor.EditorApplication.isPlaying = false;
+        }
+    }
+
+    private void ReturnToMainGame()
+    {
+        while (bIsPuzzleComplete == false)
+        {
+            if (Input.GetKey(KeyCode.Backspace))
+            {
+                gameMenu.LoadScemeAsync();
+                returnToMenu.LoadGame();
+
+
+                SceneManager.UnloadSceneAsync("Puzzle");
+
+            }
+        }
+        
     }
 }

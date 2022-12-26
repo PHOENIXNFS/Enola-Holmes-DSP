@@ -30,7 +30,7 @@ public class ReturnToMenu : MonoBehaviour
         }
     }
 
-    private void SaveGame()
+    public void SaveGame()
     {
         SaveData saveData = new SaveData();
         saveData.playerposition = new SaveData.PlayerPosition[1];

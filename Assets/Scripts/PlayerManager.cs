@@ -9,6 +9,12 @@ public class PlayerManager : MonoBehaviour
 
     private void Start()
     {
+        StartCoroutine(DelayedStart(0.1f));
+    }
+
+    private IEnumerator DelayedStart(float _delay)
+    {
+        yield return new WaitForSeconds(_delay);
         inventory = new Inventory();
         inventory_Canvas.SetInventory(inventory);
     }

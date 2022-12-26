@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[Serializable]
 public class PuzzleBox : MonoBehaviour
 {
     public int index = 0;
@@ -10,6 +11,12 @@ public class PuzzleBox : MonoBehaviour
     int y = 0;
 
     private Action<int, int> swapFunc = null;
+    public Puzzle puzzle;
+
+    private void Start()
+    {
+        puzzle = FindObjectOfType<Puzzle>();
+    }
 
     public void Init(int i, int j, int index, Sprite sprite, Action<int, int> swapFunc)
     {
@@ -56,5 +63,6 @@ public class PuzzleBox : MonoBehaviour
         }
 
         this.gameObject.transform.localPosition = EndPosition;
+        //puzzle.AllTilesInPosition();
     }
 }

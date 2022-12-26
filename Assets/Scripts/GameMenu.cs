@@ -35,4 +35,12 @@ public class GameMenu : MonoBehaviour
 
     }
 
+    public void LoadScemeAsync()
+    {
+        bContinueGamePressed = true;
+        LevelToLoad = PlayerPrefs.GetInt("SavedScene");
+        SceneManager.LoadSceneAsync(LevelToLoad);
+
+    }
+
 }

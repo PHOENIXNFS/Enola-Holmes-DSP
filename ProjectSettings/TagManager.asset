@@ -6,6 +6,17 @@ TagManager:
   tags:
   - Final Tile
   - Final Tile Background
+  - Black Bishop
+  - Black Rook
+  - Black Knight
+  - Black Queen
+  - Black Pawn
+  - White Bishop
+  - White Rook
+  - White Knight
+  - White Queen
+  - White Pawn
+  - Black King
   layers:
   - Default
   - TransparentFX

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryItemSprites : MonoBehaviour
 {
-    public InventoryItemSprites itemSpritesInstance { get; private set; }
+    public static InventoryItemSprites itemSpritesInstance { get; private set; }
 
     private void Start()
     {
@@ -13,7 +13,8 @@ public class InventoryItemSprites : MonoBehaviour
 
     public Sprite MycroftBookSprite;
     public Sprite PuzzleTileSprite;
-    public Sprite PuzzleBoxSprite;
+    public Sprite CryptexPuzzleBoxSprite;
+    public Sprite ChessBoardPuzzleSprite;
     //public Sprite SecretGlassesSprite;
     public Sprite PicturePuzzleSprite;
 

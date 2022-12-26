@@ -159,7 +159,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 1}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -170,13 +170,13 @@ Camera:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 0.5
+    width: 1
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 4.5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -285,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180328128}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.67, y: 4.26, z: 7.16}
+  m_LocalPosition: {x: 7.13, y: 3.99, z: 7.16}
   m_LocalScale: {x: 2.8214672, y: 3.3750083, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -351,6 +351,9 @@ MonoBehaviour:
   - {fileID: 1560888528, guid: 986c2bcf9ddf92843a6241cac6358b16, type: 3}
   - {fileID: 1316970857, guid: 986c2bcf9ddf92843a6241cac6358b16, type: 3}
   - {fileID: 0}
+  TempCounter: 0
+  bisAllTilesInPosition: 0
+  puzzleManager: {fileID: 681326415}
 --- !u!4 &205655725
 Transform:
   m_ObjectHideFlags: 0
@@ -470,6 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 661995333}
   - component: {fileID: 661995332}
+  - component: {fileID: 661995334}
   m_Layer: 0
   m_Name: Finish Tile Position
   m_TagString: Untagged
@@ -518,6 +522,70 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &661995334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661995331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee8b53ad6e5c1764fb21452dbdc41c4c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bIsFinalTileInPosition: 0
+--- !u!1 &681326414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 681326416}
+  - component: {fileID: 681326415}
+  m_Layer: 0
+  m_Name: PuzzleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &681326415
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681326414}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0657174d292ee3488ba6841985787ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  PuzzleBox: {fileID: 0}
+  PuzzlePiece: {fileID: 0}
+  gameMenu: {fileID: 0}
+  returnToMenu: {fileID: 0}
+  SlidingPuzzleTileMovement: {fileID: 1636796083}
+  puzzle: {fileID: 205655724}
+  bIsPuzzleComplete: 0
+--- !u!4 &681326416
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 681326414}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.73649395, y: 3.1903925, z: -1.6812637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1636796078
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +597,8 @@ GameObject:
   - component: {fileID: 1636796080}
   - component: {fileID: 1636796079}
   - component: {fileID: 1636796081}
+  - component: {fileID: 1636796082}
+  - component: {fileID: 1636796083}
   m_Layer: 0
   m_Name: Final Tile
   m_TagString: Final Tile
@@ -596,7 +666,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1636796078}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.75, y: 5.46, z: 0}
+  m_LocalPosition: {x: 6.23, y: 4.98, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -615,3 +685,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d48d9923cceb7154a94730a05e424f34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &1636796082
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636796078}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
+--- !u!114 &1636796083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1636796078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae150ef4381b89041b7769740ee553b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveSpeed: 3
+  TargetPosition: {x: 0, y: 0, z: 0}
+  IsFinalTileSelected: 0
+  FinalTilePosition: {fileID: 661995333}
+  bIsFinalTileInPosition: 0
+  puzzleManager: {fileID: 681326415}

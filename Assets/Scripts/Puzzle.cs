@@ -10,11 +10,27 @@ public class Puzzle : MonoBehaviour
 
     public Sprite[] sprites;
 
+    //public int CorrectTilesCounter;
+
+    public int TempCounter;
+
+    public bool bisAllTilesInPosition;
+
+    public PuzzleManager puzzleManager;
+
     private void Start()
     {
         Init();
-        for (int i = 0; i < 100; i++)
+        for (int i = 0; i < 1; i++)
             Shuffle();
+        //CorrectTilesCounter = 0;
+        bisAllTilesInPosition = false;
+    }
+
+    private void Update()
+    {
+        //AllTilesInPosition();
+        //GameFinished();
     }
 
     void Init()
@@ -35,6 +51,7 @@ public class Puzzle : MonoBehaviour
         int dx = GetDirectionX(x, y);
         int dy = GetDirectionY(x, y);
         Swap(x, y, dx, dy);
+        //bisAllTilesInPosition = AllTilesInPosition();
     }
 
     void Swap(int x, int y, int dx, int dy)
@@ -49,6 +66,9 @@ public class Puzzle : MonoBehaviour
         //Swap position
         from.UpdatePosition(x + dx, y + dy);
         target.UpdatePosition(x, y);
+
+        Invoke(nameof(AllTilesInPosition), 0.5f);
+
     }
 
     int GetDirectionX(int x, int y)
@@ -118,5 +138,57 @@ public class Puzzle : MonoBehaviour
         return pos * -1 == LastPosition;
     }
 
+    public bool AllTilesInPosition()
+    {
+        //Debug.Log(puzzleBoxes.Length);
+        TempCounter = 0;
+        bool _bisAllTilesInPosition = true;
+
+        //for (int i = 0; i < 4; i++)
+        //{
+        //    for (int j = 0; j < 4; j++)
+        //    {
+
+        //        //Debug.Log("i: " + i + " j: " + j);
+        //        TempCounter++;
+        //        Debug.LogFormat("Temp counter {0} | Index {1} | (i,j) = {2},{3}",TempCounter, puzzleBoxes[i, j].index, i , j);
+        //        if(puzzleBoxes[i, j].index != TempCounter)
+        //        {
+        //            _bisAllTilesInPosition = false;
+        //            bisAllTilesInPosition = _bisAllTilesInPosition;
+        //            return _bisAllTilesInPosition;
+        //        }
+        //    }
+        //}
+
+        for (int j = 3; j >= 0; j--)
+            for (int i = 0; i < 4; i++)
+            {
+
+                //Debug.Log("i: " + i + " j: " + j);
+                TempCounter++;
+                Debug.LogFormat("Temp counter {0} | Index {1} | (i,j) = {2},{3}", TempCounter, puzzleBoxes[i, j].index, i, j);
+                if (puzzleBoxes[i, j].index != TempCounter)
+                {
+                    _bisAllTilesInPosition = false;
+                    bisAllTilesInPosition = _bisAllTilesInPosition;
+                    return _bisAllTilesInPosition;
+                }
+            }
+        Debug.Log(_bisAllTilesInPosition);
+        bisAllTilesInPosition = _bisAllTilesInPosition;
+        puzzleManager.GameComplete();
+        return _bisAllTilesInPosition;
+        //Debug.Log(bisAllTilesInPosition);
+    }
+
+   //void GameFinished()
+   //{
+   //   if (CorrectTilesCounter == 16)
+   //  {
+   //    bisAllTilesInPosition = true;
+   //  Debug.Log(bisAllTilesInPosition);
+   //}
+   //}
 
 }
