@@ -2,20 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Video;
 
 public class PuzzleManager : MonoBehaviour
 {
     [SerializeField] private Transform PuzzleBox;
     [SerializeField] private Transform PuzzlePiece;
 
-    public GameMenu gameMenu;
+    //public GameMenu gameMenu;
     public ReturnToMenu returnToMenu;
-    public Inventory inventory;
+    //public Inventory inventory;
+    public Inventory_Canvas inventory_Canvas;
 
     public SlidingPuzzleTileMovement SlidingPuzzleTileMovement;
     public Puzzle puzzle;
 
     public bool bIsPuzzleComplete;
+
+    public GameObject PuzzleSolvedVideoPlayer;
+    
 
     private int emptylocation;
     private int size;
@@ -24,13 +29,17 @@ public class PuzzleManager : MonoBehaviour
     {
         //size = 4;
         //CreatePuzzlePieces(0.1f);
+        inventory_Canvas = GameManager.gameManagerInstance.inventoryCanvas;
+        returnToMenu = GameManager.gameManagerInstance.returnToMenu;
         bIsPuzzleComplete = false;
+        PuzzleSolvedVideoPlayer.gameObject.SetActive(false);
     }
 
     private void Update()
     {
+        StartCoroutine(GameComplete());
         //GameComplete();
-        //ReturnToMainGame();
+        ReturnToMainGame();
     }
 
     private void CreatePuzzlePieces(float GapThickness)
@@ -56,35 +65,52 @@ public class PuzzleManager : MonoBehaviour
            
     }
 
-    public void GameComplete()
+    public IEnumerator GameComplete()
     {
         
-        if (SlidingPuzzleTileMovement.bIsFinalTileInPosition == true && puzzle.bisAllTilesInPosition == true)
+        if (SlidingPuzzleTileMovement.bIsFinalTileInPosition == true && puzzle.bisAllTilesInPosition == true && !bIsPuzzleComplete)
         {
             bIsPuzzleComplete = true;
             //Cutscene Puzzle Solved;
             //Cutscene Puzzle Box Found;
             //remove sliding puzzle and puzzle tile from inventory;
-            inventory.RemoveInventoryItem(InventoryItem.InventoryItemType.PicturePuzzle);            
-            inventory.AddInventoryItem(new InventoryItem { inventoryItemType = InventoryItem.InventoryItemType.CryptexPuzzleBox});
-            gameMenu.LoadScemeAsync();
+            //gameMenu.LoadScemeAsync();
+            PuzzleSolvedVideoPlayer.gameObject.SetActive(true);
+            PuzzleSolvedVideoPlayer.GetComponent<VideoPlayer>().Play();
+            yield return new WaitForSeconds(5);
+            //SceneManager.LoadSceneAsync("TestLevel");
             returnToMenu.LoadGame();
-            SceneManager.UnloadSceneAsync("Puzzle");
+            InventoryManager.inventoryManagerInstance.inventory.Inventory_Load_Data(); //Data not loading
+            //inventory_Canvas.UpdateInventorySlots();
+            //inventory.RemoveInventoryItem(InventoryItem.InventoryItemType.PuzzleTile);
+            InventoryManager.inventoryManagerInstance.inventory.RemoveInventoryItem(InventoryItem.InventoryItemType.PicturePuzzle);
+            InventoryManager.inventoryManagerInstance.inventory.RemoveInventoryItem(InventoryItem.InventoryItemType.PuzzleTile);
+            InventoryManager.inventoryManagerInstance.inventory.AddInventoryItem(new InventoryItem { inventoryItemType = InventoryItem.InventoryItemType.CryptexPuzzleBox });
+            inventory_Canvas.UpdateInventorySlots();
+            GameScoreManager.gameScoreManagerInstance.GameScore += 100;
+            GameScoreManager.gameScoreManagerInstance.GameScoreUpdated = true;
             //UnityEditor.EditorApplication.isPlaying = false;
+            //SceneManager.UnloadSceneAsync("Puzzle");
+            GameManager.gameManagerInstance.UnloadScene("Puzzle");
+
         }
     }
 
     private void ReturnToMainGame()
     {
-        while (bIsPuzzleComplete == false)
+        if (bIsPuzzleComplete == false)
         {
             if (Input.GetKey(KeyCode.Backspace))
             {
-                gameMenu.LoadScemeAsync();
+                //gameMenu.LoadScemeAsync();               
+                //SceneManager.LoadSceneAsync("TestLevel");
                 returnToMenu.LoadGame();
+                InventoryManager.inventoryManagerInstance.inventory.Inventory_Load_Data();
+                // Debug.Log(InventoryManager.inventoryManagerInstance.inventory.inventoryItemList);
+                inventory_Canvas.UpdateInventorySlots();
+                //SceneManager.UnloadSceneAsync("Puzzle");
+                GameManager.gameManagerInstance.UnloadScene("Puzzle");
 
-
-                SceneManager.UnloadSceneAsync("Puzzle");
 
             }
         }

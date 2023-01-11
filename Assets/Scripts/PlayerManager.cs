@@ -16,7 +16,7 @@ public class PlayerManager : MonoBehaviour
     {
         yield return new WaitForSeconds(_delay);
         inventory = new Inventory();
-        inventory_Canvas.SetInventory(inventory);
+        InventoryManager.inventoryManagerInstance.SetInventory(inventory);
     }
 
 }

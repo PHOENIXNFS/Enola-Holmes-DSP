@@ -39,7 +39,7 @@ public class Puzzle : MonoBehaviour
         for (int y = 3; y >= 0; y--)
             for(int x = 0; x < 4; x++)
             {
-                PuzzleBox puzzleBox = Instantiate(puzzleBoxPrefab, new Vector2(x, y), Quaternion.identity);
+                PuzzleBox puzzleBox = Instantiate(puzzleBoxPrefab, new Vector2(x, y), Quaternion.identity, transform);
                 puzzleBox.Init(x, y, n + 1, sprites[n], ClickToSwap);
                 puzzleBoxes[x, y] = puzzleBox;
                 n++;
@@ -167,7 +167,7 @@ public class Puzzle : MonoBehaviour
 
                 //Debug.Log("i: " + i + " j: " + j);
                 TempCounter++;
-                Debug.LogFormat("Temp counter {0} | Index {1} | (i,j) = {2},{3}", TempCounter, puzzleBoxes[i, j].index, i, j);
+                //Debug.LogFormat("Temp counter {0} | Index {1} | (i,j) = {2},{3}", TempCounter, puzzleBoxes[i, j].index, i, j);
                 if (puzzleBoxes[i, j].index != TempCounter)
                 {
                     _bisAllTilesInPosition = false;
@@ -175,7 +175,7 @@ public class Puzzle : MonoBehaviour
                     return _bisAllTilesInPosition;
                 }
             }
-        Debug.Log(_bisAllTilesInPosition);
+        //Debug.Log(_bisAllTilesInPosition);
         bisAllTilesInPosition = _bisAllTilesInPosition;
         puzzleManager.GameComplete();
         return _bisAllTilesInPosition;

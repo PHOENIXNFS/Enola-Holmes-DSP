@@ -234,7 +234,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -578,7 +579,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -1081,7 +1083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -1249,7 +1252,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -2508,6 +2512,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bIsWhitePawnInPosition2: 0
   ChessPuzzleLocationValidationManager: {fileID: 702604537}
+--- !u!1 &295388181
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 295388182}
+  - component: {fileID: 295388184}
+  - component: {fileID: 295388183}
+  m_Layer: 5
+  m_Name: King's Death Headline
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &295388182
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295388181}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997533461}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 316.32, y: 281}
+  m_SizeDelta: {x: 574.479, y: 58.0552}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &295388183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295388181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: a986ee20b74548d4bb84135190d13857, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 64
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: King's Death
+--- !u!222 &295388184
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295388181}
+  m_CullTransparentMesh: 1
 --- !u!1 &308336000
 GameObject:
   m_ObjectHideFlags: 0
@@ -2620,7 +2704,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -2964,7 +3049,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -3211,7 +3297,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -3345,7 +3432,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -3479,7 +3567,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -3648,7 +3737,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -4008,7 +4098,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -4143,6 +4234,96 @@ MonoBehaviour:
   ChessPuzzleSpriteMoveOnMouseClick: {fileID: 0}
   originalMaterial: {fileID: 0}
   HighlightedMaterial: {fileID: 2100000, guid: 1577963048efa0145a9b0d9b898781bc, type: 2}
+--- !u!1 &600767552
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 600767553}
+  - component: {fileID: 600767555}
+  - component: {fileID: 600767554}
+  m_Layer: 5
+  m_Name: Chess Instructions Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &600767553
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600767552}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997533461}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 316.32, y: -79.00003}
+  m_SizeDelta: {x: 607.64, y: 829.4555}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &600767554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600767552}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ea144a23746569d4eb39bc744e748b8e, type: 3}
+    m_FontSize: 40
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 64
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '
+
+
+    ...The King defended the castle standing in front of it, while
+    the evil king was only 1 yard away from him...People came to help their king
+    and surrounded the castle left and right
+
+
+    ....While the bishop hid behind
+    the people, the queen was kept safe behind the castle. Knight was responsible
+    for her and never left her right side.'
+--- !u!222 &600767555
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 600767552}
+  m_CullTransparentMesh: 1
 --- !u!1 &680010205
 GameObject:
   m_ObjectHideFlags: 0
@@ -4354,9 +4535,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bIsAllChessPiecesInPosition: 0
+  bIsChessPuzzleComplete: 0
   BlackKingValidator: {fileID: 80484138}
   BlackKnightValidator: {fileID: 954310251}
-  BlackPawnValidator: {fileID: 1550156925}
   BlackQueenValidator: {fileID: 137203855}
   WhiteBishopValidator: {fileID: 2132799027}
   WhiteKnightValidator: {fileID: 32777454}
@@ -4364,7 +4545,8 @@ MonoBehaviour:
   WhiteRookValidator: {fileID: 1803462244}
   WhitePawnValidatorPosition1: {fileID: 1884645728}
   WhitePawnValidatorPosition2: {fileID: 272428639}
-  WhitePawnValidatorPosition3: {fileID: 1308775780}
+  returnToMenu: {fileID: 0}
+  inventory_Canvas: {fileID: 0}
 --- !u!4 &702604538
 Transform:
   m_ObjectHideFlags: 0
@@ -4491,7 +4673,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -4625,6 +4808,38 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bIsWhiteQueenInPosition: 0
   ChessPuzzleLocationValidationManager: {fileID: 702604537}
+--- !u!1 &774800089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 774800090}
+  m_Layer: 0
+  m_Name: Mycroft Book Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &774800090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 774800089}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -2.5923893, y: 2.8945785, z: -0.9427816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 997533461}
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &775602450
 GameObject:
   m_ObjectHideFlags: 0
@@ -4736,7 +4951,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -5614,7 +5830,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -6188,7 +6405,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -6210,6 +6428,86 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &978289338
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 978289339}
+  - component: {fileID: 978289341}
+  - component: {fileID: 978289340}
+  m_Layer: 5
+  m_Name: Text (Legacy)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &978289339
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978289338}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1812046184}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &978289340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978289338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Button
+--- !u!222 &978289341
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 978289338}
+  m_CullTransparentMesh: 1
 --- !u!1 &986820873
 GameObject:
   m_ObjectHideFlags: 0
@@ -6482,6 +6780,110 @@ MonoBehaviour:
   ChessPuzzleSpriteMoveOnMouseClick: {fileID: 0}
   originalMaterial: {fileID: 0}
   HighlightedMaterial: {fileID: 2100000, guid: 1577963048efa0145a9b0d9b898781bc, type: 2}
+--- !u!1 &997533460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 997533461}
+  - component: {fileID: 997533464}
+  - component: {fileID: 997533463}
+  - component: {fileID: 997533462}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &997533461
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997533460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1879404270}
+  - {fileID: 2041354923}
+  - {fileID: 600767553}
+  - {fileID: 295388182}
+  m_Father: {fileID: 774800090}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &997533462
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997533460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &997533463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997533460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &997533464
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997533460}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1001340985
 GameObject:
   m_ObjectHideFlags: 0
@@ -6854,7 +7256,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -7521,7 +7924,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -7655,7 +8059,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -7789,7 +8194,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -7923,7 +8329,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -8056,7 +8463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -8146,6 +8554,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1140380991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140380992}
+  m_Layer: 0
+  m_Name: Scene Buttons
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1140380992
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140380991}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1628186731}
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1177071802
 GameObject:
   m_ObjectHideFlags: 0
@@ -9401,7 +9841,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -9619,7 +10060,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -9769,6 +10211,107 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bIsBlackPawnInPosition: 0
   ChessPuzzleLocationValidationManager: {fileID: 702604537}
+--- !u!1 &1628186730
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1628186731}
+  - component: {fileID: 1628186734}
+  - component: {fileID: 1628186733}
+  - component: {fileID: 1628186732}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1628186731
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628186730}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1812046184}
+  m_Father: {fileID: 1140380992}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1628186732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628186730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1628186733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628186730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+  m_PresetInfoIsWorld: 0
+--- !u!223 &1628186734
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628186730}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1663607429
 GameObject:
   m_ObjectHideFlags: 0
@@ -9900,7 +10443,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -11003,7 +11547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -11153,6 +11698,167 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bIsWhiteRookInPosition: 0
   ChessPuzzleLocationValidationManager: {fileID: 702604537}
+--- !u!1 &1812046183
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1812046184}
+  - component: {fileID: 1812046187}
+  - component: {fileID: 1812046186}
+  - component: {fileID: 1812046185}
+  - component: {fileID: 1812046188}
+  - component: {fileID: 1812046189}
+  m_Layer: 5
+  m_Name: Mycroft Book Button
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1812046184
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 978289339}
+  m_Father: {fileID: 1628186731}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 854, y: -427}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1812046185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1812046186}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1812046188}
+        m_TargetAssemblyTypeName: MycroftBookButton, Assembly-CSharp
+        m_MethodName: OpenMycroftBook
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1812046186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 28c51f7c5947f7b40a20a5eaeef02d0f, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1812046187
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_CullTransparentMesh: 1
+--- !u!114 &1812046188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11c7339bcf5afc64c9b98873100c6b99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MycroftBookCanvas: {fileID: 774800089}
+--- !u!114 &1812046189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812046183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2c86643b17384344b3e667bbf0362ae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1821586458
 GameObject:
   m_ObjectHideFlags: 0
@@ -11378,7 +12084,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -11400,6 +12107,82 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1879404269
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1879404270}
+  - component: {fileID: 1879404272}
+  - component: {fileID: 1879404271}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1879404270
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879404269}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 14, y: 10, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997533461}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: -79}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1879404271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879404269}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 86e6b135bc20f7a418629a2589d0e701, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1879404272
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879404269}
+  m_CullTransparentMesh: 1
 --- !u!1 &1884645722
 GameObject:
   m_ObjectHideFlags: 0
@@ -11866,7 +12649,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -12113,7 +12897,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -12670,7 +13455,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -12952,6 +13738,86 @@ MonoBehaviour:
   ChessPuzzleSpriteMoveOnMouseClick: {fileID: 0}
   originalMaterial: {fileID: 0}
   HighlightedMaterial: {fileID: 2100000, guid: 1577963048efa0145a9b0d9b898781bc, type: 2}
+--- !u!1 &2041354922
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2041354923}
+  - component: {fileID: 2041354925}
+  - component: {fileID: 2041354924}
+  m_Layer: 5
+  m_Name: Chess Instructions HeadLine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2041354923
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041354922}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 997533461}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -291.32104, y: -70.7944}
+  m_SizeDelta: {x: 607.6421, y: 829.4555}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2041354924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041354922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ea144a23746569d4eb39bc744e748b8e, type: 3}
+    m_FontSize: 64
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 64
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Chess Puzzle Instructions
+--- !u!222 &2041354925
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2041354922}
+  m_CullTransparentMesh: 1
 --- !u!1 &2042435441
 GameObject:
   m_ObjectHideFlags: 0
@@ -13064,7 +13930,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}
@@ -13421,7 +14288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4412cec988c9a3048b41f346cda83568, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ChessPuzzleManager: {fileID: 0}
+  ChessPiecesOnPaper: []
+  ChessPuzzleManager: {fileID: 197622825}
   MoveSpeed: 3
   RotationSpeed: 2
   TargetPosition: {x: 0, y: 0, z: 0}

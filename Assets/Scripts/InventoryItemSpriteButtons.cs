@@ -17,6 +17,7 @@ public class InventoryItemSpriteButtons : MonoBehaviour
     public Button CryptexPuzzleBoxSpriteButton;
     public Button PicturePuzzleSpriteButton;
     public Button ChessBoardPuzzleButton;
+    public Button MusicButton;
     //public Button SecretGlassesSpriteButton;
 
 }

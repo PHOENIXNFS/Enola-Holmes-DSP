@@ -11,9 +11,9 @@ public class ChessPuzzleManager : MonoBehaviour
 
     public void Start()
     {
-        HeightAdjustment = new Vector3(0, 3, 0);
+        HeightAdjustment = new Vector3(0, 0.5f, 0);
+        currentlySelectedChessPiece = FindObjectOfType<ChessPuzzleSpriteMoveOnMouseClick>();
     }
-
 
     public void CheckTileForPositionofSpriteMovement()
     {
@@ -37,6 +37,7 @@ public class ChessPuzzleManager : MonoBehaviour
                     if( HitChessTile.collider.gameObject.name == chessTile.gameObject.name)
                     {
                         currentlySelectedChessPiece.TargetPosition = chessTile.transform.position;
+                        currentlySelectedChessPiece.TargetPosition += HeightAdjustment;
                     }
                 }    
             }

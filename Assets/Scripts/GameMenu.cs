@@ -9,10 +9,23 @@ public class GameMenu : MonoBehaviour
     public static bool bNewGamePressed;
     public static bool bContinueGamePressed;
 
-    public void Awake()
+    //public static GameMenu gameMenuInstance {get; private set;}
+
+public void Awake()
     {
+        
         bNewGamePressed = false;
         bContinueGamePressed = false;
+        //if (gameMenuInstance != null && gameMenuInstance != this)
+        //{
+        //    Destroy(gameObject);
+
+        //}
+        //else
+        //{
+        //    gameMenuInstance = this;
+        //}
+        //DontDestroyOnLoad(this);
     }
 
     public void NewGame()
@@ -30,8 +43,10 @@ public class GameMenu : MonoBehaviour
     public void LoadSceme()
     {
         bContinueGamePressed = true;
-        LevelToLoad = PlayerPrefs.GetInt("SavedScene");
-        SceneManager.LoadScene(LevelToLoad);
+        //LevelToLoad = PlayerPrefs.GetInt("SavedScene");
+        //SceneManager.LoadScene(LevelToLoad);
+        GameManager.gameManagerInstance.returnToMenu.bIsReturnToMenuPressed = false;
+        GameManager.gameManagerInstance.UnloadScene("Game Main Menu");
 
     }
 
@@ -40,6 +55,7 @@ public class GameMenu : MonoBehaviour
         bContinueGamePressed = true;
         LevelToLoad = PlayerPrefs.GetInt("SavedScene");
         SceneManager.LoadSceneAsync(LevelToLoad);
+        //SceneManager.UnloadSceneAsync("Game Main Menu");
 
     }
 

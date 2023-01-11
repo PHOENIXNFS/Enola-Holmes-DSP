@@ -17,6 +17,7 @@ TagManager:
   - White Queen
   - White Pawn
   - Black King
+  - Audio Source
   layers:
   - Default
   - TransparentFX
@@ -24,7 +25,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Onboarding
   - 
   - 
   - 

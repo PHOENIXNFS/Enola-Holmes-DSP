@@ -14,6 +14,7 @@ public class ChessBoardTileSelector : MonoBehaviour
     private void Start()
     {
         originalMaterial = GetComponent<MeshRenderer>().material;
+        ChessPuzzleSpriteMoveOnMouseClick = FindObjectOfType<ChessPuzzleSpriteMoveOnMouseClick>();
     }
 
     public void CheckTileForPositionofSpriteMovement()

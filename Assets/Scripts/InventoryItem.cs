@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[System.Serializable]
 public class InventoryItem {
 
     public enum InventoryItemType
@@ -13,6 +14,7 @@ public class InventoryItem {
         CryptexPuzzleBox,
         ChessBoardPuzzle,
         //SecretGlasses,
+        MusicButton,
 
     }
 
@@ -29,6 +31,7 @@ public class InventoryItem {
             case InventoryItemType.PuzzleTile: return InventoryItemSprites.itemSpritesInstance.PuzzleTileSprite;
             case InventoryItemType.ChessBoardPuzzle: return InventoryItemSprites.itemSpritesInstance.ChessBoardPuzzleSprite;
             //case InventoryItemType.SecretGlasses: return inventoryItemSprites.itemSpritesInstance.SecretGlassesSprite;
+            case InventoryItemType.MusicButton: return InventoryItemSprites.itemSpritesInstance.MusicButtonSprite;
         }
     }
 
@@ -43,6 +46,7 @@ public class InventoryItem {
             case InventoryItemType.PuzzleTile: return InventoryItemSpriteButtons.itemSpriteButtonsInstance.PuzzleTileSpriteButton;
             case InventoryItemType.ChessBoardPuzzle: return InventoryItemSpriteButtons.itemSpriteButtonsInstance.ChessBoardPuzzleButton;
             //case InventoryItemType.SecretGlasses: return InventoryItemSpriteButtons.itemSpriteButtonsInstance.SecretGlassesSpriteButton;
+            case InventoryItemType.MusicButton: return InventoryItemSpriteButtons.itemSpriteButtonsInstance.MusicButton;
         }
     }
 

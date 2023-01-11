@@ -5,7 +5,7 @@ using UnityEngine;
 public class ChessPuzzleSpriteMoveOnMouseClick : MonoBehaviour
 {
 
-    public static List<ChessPuzzleSpriteMoveOnMouseClick> ChessPiecesOnPaper = new List<ChessPuzzleSpriteMoveOnMouseClick>();
+    public List<ChessPuzzleSpriteMoveOnMouseClick> ChessPiecesOnPaper = new List<ChessPuzzleSpriteMoveOnMouseClick>();
     //public ChessBoardTileSelector chessBoardTileSelector;
     public ChessPuzzleManager ChessPuzzleManager;
     public float MoveSpeed = 3.0f;

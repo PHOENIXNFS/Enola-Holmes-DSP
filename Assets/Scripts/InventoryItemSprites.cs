@@ -17,5 +17,6 @@ public class InventoryItemSprites : MonoBehaviour
     public Sprite ChessBoardPuzzleSprite;
     //public Sprite SecretGlassesSprite;
     public Sprite PicturePuzzleSprite;
+    public Sprite MusicButtonSprite;
 
 }

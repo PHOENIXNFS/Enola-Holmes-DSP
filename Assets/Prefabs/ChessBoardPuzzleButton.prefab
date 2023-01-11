@@ -92,6 +92,7 @@ GameObject:
   - component: {fileID: 2107061703392361109}
   - component: {fileID: 641854047720952548}
   - component: {fileID: 7136182276898603614}
+  - component: {fileID: -2950943955643167970}
   m_Layer: 5
   m_Name: ChessBoardPuzzleButton
   m_TagString: Untagged
@@ -106,19 +107,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3101390505946603999}
-  m_LocalRotation: {x: 0.078231215, y: 0.31919378, z: -0.028493283, w: 0.9440251}
-  m_LocalPosition: {x: 0, y: 0, z: -1.6004212}
-  m_LocalScale: {x: 0.10861611, y: 0.10024525, z: 0.10000004}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.09, y: 0.13, z: 0.1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6014611649921872238}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 10.587224, y: 75.74417}
-  m_SizeDelta: {x: 9.512001, y: 13.219002}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2107061703392361109
 CanvasRenderer:
@@ -201,4 +202,29 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 641854047720952548}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: -2950943955643167970}
+        m_TargetAssemblyTypeName: InventoryButtonFunctionality, Assembly-CSharp
+        m_MethodName: ChessPuzzleButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
+--- !u!114 &-2950943955643167970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3101390505946603999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1061c48d17b3e7a469a9a38e0975d849, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory_Canvas: {fileID: 0}
